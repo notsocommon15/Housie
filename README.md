@@ -1,2 +1,0 @@
-# Housie
-Housie Number Generator
