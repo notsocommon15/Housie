@@ -15,11 +15,7 @@
     align-items: center;
     flex-direction: column;
   }
-  .twitter-button {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
+ 
   input[type=checkbox] {
     position: absolute;
     text-indent: -9999px;
