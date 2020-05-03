@@ -3,6 +3,15 @@
     margin: 0;
     padding: 0;
   }
+@-ms-viewport {
+  width: device-width ;
+}
+@-webkit-viewport {
+  width: device-width ;
+}
+@-moz-viewport {
+  width: device-width ;
+}
 @media only screen and (max-width: 600px) {
 
   body {
