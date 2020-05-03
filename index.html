@@ -1,8 +1,9 @@
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Housie Number Generator</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet"/>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
     </head>
     <body>
@@ -19,8 +20,12 @@
               </div>
             </div>
             
-            <h2 class="count">Numbers Checked - <div class="twitter-button">
-              </div></h2>
+            <div class="count" >Numbers Checked - <ul id="menu" class="count">
+              <li v-for="item in checked">
+                {{ item }}
+              </li>
+            </ul></>
+              </h2>
           </div>
     </body>
     <script src="script.js"></script>
