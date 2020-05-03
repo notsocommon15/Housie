@@ -193,3 +193,20 @@
       font-weight: bold;
     }
   }
+ @media screen and (min-width: 481px) {
+    .tambola {
+      grid-template-areas: 
+        "pick"
+        "count"
+        "board"
+    }
+    .board {
+      grid-template-columns: repeat(10, 1fr);
+    }
+    .number-box label {
+      width: 5vh;
+      height: 5vh;
+      font-size: 2.5vh;
+      font-weight: bold;
+    }
+  }
