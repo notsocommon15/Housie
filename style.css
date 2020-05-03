@@ -46,7 +46,7 @@
   .board::after {
     opacity: 0;
     transition: 0.3s;
-    content: "GAME OVER";
+    content: "GAME OVER MADE BY SUBHAM KEDIA";
     position: absolute;
     display: flex;
     align-items: center;
