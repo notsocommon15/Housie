@@ -12,6 +12,8 @@
           <div class="pick">
             <button @click="pickNumber" :disabled="isFinished" type="button">PICK</button>
             <div class="current" v-text="currentNumber"></div>
+            <form>
+            <button @click="reset" class="reset" type="button">Reset</button></form>
           </div>
           <div class="board" :class="{'board-finished': isFinished}">
             <div class="number-box" v-for="n in boardNumbers">
