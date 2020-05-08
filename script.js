@@ -25,13 +25,6 @@ new Vue({
           break;
         }
       }
-    },
-    reset() {
-      const answer = window.confirm("Are you sure you want to reset the board?");
-      if(answer) {
-        this.currentNumber = 0;
-        this.checked = [];
-      }
     }
   }
 });
