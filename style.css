@@ -147,11 +147,6 @@ display:inline;
   outline: none;
   position: relative;
 }
-.pick button.reset {
-  background: #f0d569;
-  border-color: #f0d569;
-  color: #000000;
-}
 .current {
   display: flex;
   padding: 2rem;
