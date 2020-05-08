@@ -1,29 +1,31 @@
 new Vue({
-    el: ".tambola",
-    data() {
-      return {
-        boardNumbers: 90,
-        checked: [],
-        currentNumber: 0
-      };
+  el: ".tambola",
+  data() {
+    return {
+      boardNumbers: 90,
+      checked: [],
+      currentNumber: 0
+    };
+  },
+  computed: {
+    isFinished() {
+      return this.checked.length === 90;
+    }
+  },
+  methods: {
+    isChecked(n) {
+      return this.checked.includes(n+1);
     },
-    computed: {
-      isFinished() {
-        return this.checked.length === 90;
+    pickNumber() {
+      while (1) {
+        let number = Math.ceil(Math.random() * this.boardNumbers);
+        if (!this.checked.includes(number)) {
+          this.checked.push(number);
+          this.currentNumber = number;
+          break;
+        }
       }
     },
-    methods: {
-      isChecked(n) {
-        return this.checked.includes(n+1);
-      },
-      pickNumber() {
-        while (1) {
-          let number = Math.ceil(Math.random() * this.boardNumbers);
-          if (!this.checked.includes(number)) {
-            this.checked.push(number);
-            this.currentNumber = number;
-            break;
-          },
     reset() {
       const answer = window.confirm("Are you sure you want to reset the board?");
       if(answer) {
@@ -31,9 +33,5 @@ new Vue({
         this.checked = [];
       }
     }
-        }
-      }
-    }
-  });
-  
-  
+  }
+});
