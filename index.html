@@ -17,8 +17,8 @@
           </div>
           <div class="board" :class="{'board-finished': isFinished}">
             <div class="number-box" v-for="n in boardNumbers">
-              <input disabled :checked="isChecked(n)" type="checkbox" :id="`number-${n+1}`">
-              <label :for="`number-${n+1}`">{{n+1}}</label>
+              <input disabled :checked="isChecked(n)" type="checkbox" :id="'number-${n+1}'">
+              <label :for="'number-${n+1}'">{{n+1}}</label>
             </div>
           </div>
           
