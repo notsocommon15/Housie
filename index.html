@@ -1,33 +1,34 @@
+
 <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Housie Number Generator</title>
-        <link href="style.css" rel="stylesheet"/>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
-    </head>
-    <body>
-        <div class="tambola">
-            <div class="pick">
-              <button @click="pickNumber" :disabled="isFinished" type="button">PICK</button>
-              <div class="current" v-text="currentNumber"></div>
-                <form>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Housie Number Generator</title>
+      <link href="style.css" rel="stylesheet"/>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+  </head>
+  <body>
+      <div class="tambola">
+          <div class="pick">
+            <button @click="pickNumber" :disabled="isFinished" type="button">PICK</button>
+            <div class="current" v-text="currentNumber"></div>
+            <form>
             <button @click="reset" class="reset" type="button">Reset</button></form>
-            </div>
-            <div class="board" :class="{'board-finished': isFinished}">
-              <div class="number-box" v-for="n in boardNumbers">
-                <input disabled :checked="isChecked(n)" type="checkbox" :id="`number-${n+1}`">
-                <label :for="`number-${n+1}`">{{n+1}}</label>
-              </div>
-            </div>
-            
-            <div class="count" >Numbers Checked - <ul id="menu" class="count">
-              <li v-for="item in checked">
-                {{ item }}
-              </li>
-            </ul></>
-              </h2>
           </div>
-    </body>
-    <script src="script.js"></script>
+          <div class="board" :class="{'board-finished': isFinished}">
+            <div class="number-box" v-for="n in boardNumbers">
+              <input disabled :checked="isChecked(n)" type="checkbox" :id="`number-${n+1}`">
+              <label :for="`number-${n+1}`">{{n+1}}</label>
+            </div>
+          </div>
+          
+          <div class="count" >Numbers Checked - <ul id="menu" class="count">
+            <li v-for="item in checked">
+              {{ item }}
+            </li>
+          </ul>
+            </h2>
+        </div>
+  </body>
+  <script src="script.js"></script>
 </html>
